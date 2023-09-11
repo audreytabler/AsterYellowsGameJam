@@ -17,6 +17,7 @@ public class WindowManager : MonoBehaviour, IPointerDownHandler
     {
         this.gameObject.SetActive(true);
         rectTransform.anchoredPosition = Vector3.zero;
+        rectTransform.SetAsLastSibling();
     }
     public void CloseWindow()
     {
