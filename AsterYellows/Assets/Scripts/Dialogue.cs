@@ -11,8 +11,12 @@ public class Dialogue : MonoBehaviour
 
     public string[] lines;
     public float textSpeed;
+    public static bool enableActions { get; private set; }
+
     private int index;
     private bool isTyping = false;
+    private int dialogNum;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +43,8 @@ public class Dialogue : MonoBehaviour
     }
     void StartDialogue()
     {
-        index=0;
+        enableActions = false;
+        index =0;
         StartCoroutine(TypeLine());
     }
 
@@ -56,7 +61,15 @@ public class Dialogue : MonoBehaviour
 
     void NextLine()
     {
-        if (index < lines.Length-1) 
+        if (lines[index][0] == '!')
+        {
+            Debug.Log("Lines sub 0 is !");
+            gameObject.SetActive(false);
+
+            enableActions = true;
+
+        }
+        else if (index < lines.Length-1) 
         {
             index++;
             textComponent.text = string.Empty;
