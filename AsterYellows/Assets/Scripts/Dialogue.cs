@@ -21,6 +21,7 @@ public class Dialogue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        dialogNum = 0;  
         textComponent.text = string.Empty;
         StartDialogue();
     }
@@ -61,9 +62,10 @@ public class Dialogue : MonoBehaviour
 
     void NextLine()
     {
-        if (lines[index][0] == '!')
+        if (lines[index].Equals("!"))
         {
-            Debug.Log("Lines sub 0 is !");
+
+            dialogNum += 1;
             gameObject.SetActive(false);
 
             enableActions = true;
