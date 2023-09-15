@@ -1,0 +1,108 @@
+{
+  "dialogList": [
+    {
+      "dialog": [
+        {
+          "image": "AsterTutorialSpriteHappyFace.png",
+          "text": "Hello! Welcome to Aster Yellows meadow! (click text box to continue)"
+        },
+        {
+          "image": "AsterTutorialSpriteInnocentFace.png",
+          "text": "Your goal is to return this empty plane of dirt into the lush meadow it once was!"
+        },
+        {
+          "image": "AsterTutorialSpriteHappyFace.png",
+          "text": "Let's start by planting some seeds! Use WASD or the arrow keys to move, and click on a patch of soil to plant a seed!"
+        }
+      ]
+    },
+
+    {
+      "dialog": [
+        {
+          "image": "AsterTutorialSpriteHappyFace.png",
+          "text": "Great job! Plant as many seeds as you'd like-- I gave you a lot!"
+        },
+        {
+          "image": "AsterTutorialSpriteHappyFace.png",
+          "text": "The seeds will grow on their own, but you can also use the wateirng can to make them grow faster!"
+        }
+      ]
+    },
+
+    {
+      "dialog": [
+        {
+          "image": "AsterTutorialSpriteInnocentFace.png",
+          "text": "Aww look at that! The flowers are starting to bloom! Keep it up!"
+
+        }
+      ]
+    },
+    {
+      "dialog": [
+        {
+          "image": "AsterTutorialSpriteWorriedFace.png",
+          "text": "Oh no! One of your flowers is starting to wilt-- maybe you should try watering it?"
+
+        }
+      ]
+    },
+    {
+      "dialog": [
+        {
+          "image": "AsterTutorialSpriteChillFace.png",
+          "text": "Oops wait sorry that made it worse..."
+
+        },
+        {
+          "image": "AsterTutorialSpriteHappyFace.png",
+          "text": "Here-- try this healing item instead!"
+
+        }
+      ]
+    },
+    {
+      "dialog": [
+        {
+          "image": "AsterTutorialSpriteHappyFace.png",
+          "text": "Great job! Looks like the flower is happy again!"
+        },
+        {
+          "image": "AsterTutorialSpriteChillFace.png",
+          "text": "Now that you've got the hang of this, I'll make things more interesting and speed up time a bit!"
+        },
+        {
+          "image": "AsterTutorialSpriteHappyFace.png",
+          "text": "Have fun!"
+        }
+      ]
+    },
+    {
+      "dialog": [
+        {
+          "image": "AsterTutorialSpriteWorriedFace.png",
+          "text": "Oh no.. you've neglected my brethren and now the flower has become infected!"
+        },
+        {
+          "image": "AsterTutorialSpriteChillFace.png",
+          "text": "I don't yet know the cure to this particular disease yet, but please just don't let it happen again..."
+        }
+      ]
+    },
+    {
+      "dialog": [
+        {
+          "image": "AsterTutorialSpriteWorriedFace.png",
+          "text": "Yikes-- you've let more than half of our meadow become infected."
+        },
+        {
+          "image": "AsterTutorialSpriteWorriedFace.png",
+          "text": "Oh no?? What's this?? The disease is spreading on its own?"
+        },
+      ]
+    }
+
+
+  ]
+}
