@@ -8,6 +8,7 @@ public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public Image yellowsImage;
+    public TextAsset textFile;
 
     public string[] lines;
     public float textSpeed;
@@ -21,6 +22,7 @@ public class Dialogue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         dialogNum = 0;  
         textComponent.text = string.Empty;
         StartDialogue();
