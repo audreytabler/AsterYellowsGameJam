@@ -758,9 +758,9 @@ RectTransform:
   m_Father: {fileID: 57158264}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 525, y: -160.6}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -76, y: 68}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &476325206
@@ -1334,7 +1334,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -4004,6 +4004,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e40e58b08d780344989e97a0fca5206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2011309412 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5663922612638830280, guid: 94f2d649f8f6315459d1489dd1020eb5, type: 3}
+  m_PrefabInstance: {fileID: 4425593634902849329}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d82df3322a7890b49aba47ee0fc6837a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4425593634902849329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4011,6 +4022,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1515856002}
     m_Modifications:
+    - target: {fileID: 3276002533810231015, guid: 94f2d649f8f6315459d1489dd1020eb5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.0000076293945
+      objectReference: {fileID: 0}
+    - target: {fileID: 3276002533810231015, guid: 94f2d649f8f6315459d1489dd1020eb5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.0000009536743
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776705862827611287, guid: 94f2d649f8f6315459d1489dd1020eb5, type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3776705862827611287, guid: 94f2d649f8f6315459d1489dd1020eb5, type: 3}
       propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 2
@@ -4018,14 +4041,14 @@ PrefabInstance:
     - target: {fileID: 3776705862827611287, guid: 94f2d649f8f6315459d1489dd1020eb5, type: 3}
       propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 589462838}
+      objectReference: {fileID: 2011309412}
     - target: {fileID: 3776705862827611287, guid: 94f2d649f8f6315459d1489dd1020eb5, type: 3}
       propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CheckText
+      value: SetText
       objectReference: {fileID: 0}
     - target: {fileID: 3776705862827611287, guid: 94f2d649f8f6315459d1489dd1020eb5, type: 3}
       propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PuzzleManager, Assembly-CSharp
+      value: CommandLine, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3776705862827611287, guid: 94f2d649f8f6315459d1489dd1020eb5, type: 3}
       propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
@@ -4053,7 +4076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4425593636360491603, guid: 94f2d649f8f6315459d1489dd1020eb5, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4425593636360491603, guid: 94f2d649f8f6315459d1489dd1020eb5, type: 3}
       propertyPath: m_AnchorMax.x
@@ -4300,7 +4323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1879800597113700519, guid: ff8f32bb84fa43f42b6317294b9e9ec0, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1879800597113700519, guid: ff8f32bb84fa43f42b6317294b9e9ec0, type: 3}
       propertyPath: m_AnchorMax.x
