@@ -1,6 +1,7 @@
+using UnityEngine;
+using DialogDataTypes;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
@@ -10,22 +11,21 @@ public class Dialogue : MonoBehaviour
     public Image yellowsImage;
     public TextAsset textFile;
 
-    public string[] lines;
+    private DialogItem lines;
     public float textSpeed;
     public static bool enableActions { get; private set; }
 
     private int index;
     private bool isTyping = false;
-    private int dialogNum;
+
     
 
     // Start is called before the first frame update
     void Start()
     {
-        
-        dialogNum = 0;  
-        textComponent.text = string.Empty;
-        StartDialogue();
+        int index = 0;
+        //textComponent.text = string.Empty;
+        //StartDialogue();
     }
 
     // Update is called once per frame
@@ -33,19 +33,23 @@ public class Dialogue : MonoBehaviour
     {
         if(Input.GetMouseButton(0) && !isTyping) 
         {
-            if (textComponent.text == lines[index]) 
+            if (textComponent.text == lines.dialog[index].text) 
             {
                 NextLine();
             }
             else
             {
                 StopAllCoroutines();
-                textComponent.text = lines[index];
+                textComponent.text = lines.dialog[index].text;
             }
         }
     }
-    void StartDialogue()
+    public void StartDialogue(DialogItem stringArray)
     {
+       
+        textComponent.text = string.Empty;
+        gameObject.SetActive(true);
+        lines = stringArray; 
         enableActions = false;
         index =0;
         StartCoroutine(TypeLine());
@@ -53,8 +57,9 @@ public class Dialogue : MonoBehaviour
 
     IEnumerator TypeLine()
     {
+        Debug.Log(lines.dialog[index].text);
         isTyping = true;
-        foreach (char c in lines[index].ToCharArray())
+        foreach (char c in lines.dialog[index].text.ToCharArray())
         {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
@@ -64,7 +69,7 @@ public class Dialogue : MonoBehaviour
 
     void NextLine()
     {
-        if (lines[index].Equals("!"))
+        /*if (lines[index].Equals("!"))
         {
 
             dialogNum += 1;
@@ -73,7 +78,7 @@ public class Dialogue : MonoBehaviour
             enableActions = true;
 
         }
-        else if (index < lines.Length-1) 
+        else*/ if (index < lines.dialog.Length-1) 
         {
             index++;
             textComponent.text = string.Empty;
@@ -83,7 +88,11 @@ public class Dialogue : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
-            
+            FindObjectOfType<MiniGameManager>().endDialog();
+
+            enableActions = true;
+
         }
     }
+
 }

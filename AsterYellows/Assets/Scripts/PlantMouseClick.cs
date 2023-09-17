@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlantMouseClick : MonoBehaviour
 {
     public GameObject spawnObject;
+    public static int plantCount;
 
     // Update is called once per frame
     void Update()
@@ -19,6 +20,8 @@ public class PlantMouseClick : MonoBehaviour
                     Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     Vector3 offset = new Vector3(0, 0, 10);
                     Instantiate(spawnObject, pos + offset, Quaternion.identity);
+                    plantCount++;
+                    
                 }
             }
         }

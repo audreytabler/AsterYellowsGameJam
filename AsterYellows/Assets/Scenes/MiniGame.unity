@@ -193,8 +193,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -186.99994, y: -379.39}
-  m_SizeDelta: {x: 2.85, y: -294.08}
+  m_AnchoredPosition: {x: 0.001159668, y: -192.4}
+  m_SizeDelta: {x: 334.54, y: -124.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &80835388
 MonoBehaviour:
@@ -304,13 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 2034655740}
   yellowsImage: {fileID: 0}
-  lines:
-  - Hello there! Welcome to Aster Yellows farm! (click textbox to proceed)
-  - Your goal is to return this empty plane of dirt into the lush meadow it once
-    was!
-  - Let's start by planting some seeds! Use WASD or the arrow keys to move, and click
-    on a patch of soil to plant a seed!
-  - '!'
+  textFile: {fileID: 4900000, guid: ec1bde5d2fbf3f646ba1673fc04d1423, type: 3}
   textSpeed: 0.02
 --- !u!1 &198679582
 GameObject:
@@ -662,8 +656,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1232.4675, y: -28.264679}
-  m_SizeDelta: {x: 246.42, y: 245.66}
+  m_AnchoredPosition: {x: 588.6977, y: 45}
+  m_SizeDelta: {x: 131.1604, y: 130.755}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1132397221
 MonoBehaviour:
@@ -1340,8 +1334,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1965139199}
+  - component: {fileID: 1965139200}
   m_Layer: 0
-  m_Name: DialogueManager
+  m_Name: MiniGameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1362,6 +1357,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1965139200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965139198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83bd97208c64be540b6c08eb6712ee0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeSpeed: 0.01
+  jsonFile: {fileID: 4900000, guid: ec1bde5d2fbf3f646ba1673fc04d1423, type: 3}
+  textbox: {fileID: 0}
 --- !u!1 &2034655738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,7 +1407,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.1, y: -16.802}
+  m_AnchoredPosition: {x: 33, y: -34}
   m_SizeDelta: {x: 666.99, y: 141.38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2034655740
@@ -1447,8 +1457,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1483,7 +1493,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -541.0643, y: -77.48477, z: -583.8066, w: -143.40161}
+  m_margin: {x: -404.30588, y: -18.466995, z: -102.61023, w: -7.671486}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1504,6 +1514,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6802414729331863552, guid: 8929541c0e5ae9f4ab6662971311ec98, type: 3}
+      propertyPath: timeSpeed
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 6802414729331863553, guid: 8929541c0e5ae9f4ab6662971311ec98, type: 3}
       propertyPath: m_Name
       value: Plant
