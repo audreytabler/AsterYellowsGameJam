@@ -14,7 +14,7 @@ namespace DialogDataTypes
     }
     public class Dialog
     {
-        public string image;
+        public int image;
         public string text;
     }
     public class DialogList
@@ -103,7 +103,7 @@ public class MiniGameManager : MonoBehaviour
     private IEnumerator startWilt()
     {
         float timeWatch = 0.0f;
-        while (((PlantMouseClick.plantCount < 15) && (timeWatch < 80f)) ||  ((timeWatch > 100f)))
+        while (((PlantMouseClick.plantCount < 15) && (timeWatch < 100f)) ||  ((timeWatch > 140f)))
         {
             timeWatch += timeSpeed;
             yield return null; // Wait for the next frame
@@ -135,7 +135,7 @@ public class MiniGameManager : MonoBehaviour
         float i = 0;
         while (i < num)
         {
-            i += 0.5f;
+            i += 0.05f;
             yield return null; // Wait for the next frame
         }
         startDialog();

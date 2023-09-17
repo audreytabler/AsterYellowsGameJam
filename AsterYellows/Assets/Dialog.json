@@ -3,15 +3,15 @@
     {
       "dialog": [
         {
-          "image": "AsterTutorialSpriteHappyFace.png",
+          "image": 1,
           "text": "Hello! Welcome to Aster Yellows meadow! (click text box to continue)"
         },
         {
-          "image": "AsterTutorialSpriteBigSmileFace.png",
+          "image": 2,
           "text": "Your goal is to return this empty plane of dirt into the lush meadow it once was!"
         },
         {
-          "image": "AsterTutorialSpriteHappyFace.png",
+          "image": 1,
           "text": "Let's start by planting some seeds! Use WASD or the arrow keys to move, and click on a patch of soil to plant a seed!"
         }
       ]
@@ -20,11 +20,11 @@
     {
       "dialog": [
         {
-          "image": "AsterTutorialSpriteBigSmileFace.png",
+          "image": 2,
           "text": "Great job! Plant as many seeds as you'd like!"
         },
         {
-          "image": "AsterTutorialSpriteHappyFace.png",
+          "image": 1,
           "text": "The seeds will grow on their own, but you can also click on them to water them!"
         }
       ]
@@ -33,7 +33,7 @@
     {
       "dialog": [
         {
-          "image": "AsterTutorialSpriteWorriedFace.png",
+          "image": 4,
           "text": "Oh no! One of your flowers is starting to wilt-- maybe you should try watering it?"
 
         }
@@ -42,7 +42,7 @@
     {
       "dialog": [
         {
-          "image": "AsterTutorialSpriteNeutralFace.png",
+          "image": 3,
           "text": "hmm I think it still looks thirsty, why don't you try watering it again?'"
         }
       ]
@@ -50,7 +50,7 @@
     {
       "dialog": [
         {
-          "image": "AsterTutorialSpriteWorriedFace.png",
+          "image": 4,
           "text": "Hmmm... Looks like this flower has some sort of infection... let's hope it doesn't spread to your other plants"
         },
 
@@ -59,15 +59,15 @@
     {
       "dialog": [
         {
-          "image": "AsterTutorialSpriteWorriedFace.png",
+          "image": 4,
           "text": "Wow-- that infection spread pretty quickly."
         },
         {
-          "image": "AsterTutorialSpriteChillFace.png",
+          "image": 0,
           "text": "I'm afraid our only hope at this point is to start the meadow over as we don't have the means to cure this..."
         },
         {
-          "image": "AsterTutorialSpriteHappyFace.png",
+          "image": 1,
           "text": "Here, I've added a button for you to click whenever you would like to restart this meadow! Second time's the charm!"
         }
       ]

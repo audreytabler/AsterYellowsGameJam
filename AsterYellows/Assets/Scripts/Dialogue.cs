@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
-    public Image yellowsImage;
+    public Animator animator;
     public TextAsset textFile;
 
     private DialogItem lines;
@@ -46,7 +46,7 @@ public class Dialogue : MonoBehaviour
     }
     public void StartDialogue(DialogItem stringArray)
     {
-       
+        
         textComponent.text = string.Empty;
         gameObject.SetActive(true);
         lines = stringArray; 
@@ -57,7 +57,8 @@ public class Dialogue : MonoBehaviour
 
     IEnumerator TypeLine()
     {
-        Debug.Log(lines.dialog[index].text);
+        animator.SetInteger("MoodInt", lines.dialog[index].image);
+       // Debug.Log(lines.dialog[index].text);
         isTyping = true;
         foreach (char c in lines.dialog[index].text.ToCharArray())
         {
