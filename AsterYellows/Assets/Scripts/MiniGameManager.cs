@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json;
 using DialogDataTypes;
+using UnityEngine.SceneManagement;
 
 
 namespace DialogDataTypes
@@ -29,6 +30,7 @@ public class MiniGameManager : MonoBehaviour
     public float timeSpeed;
     private float prevTimeSpeed;
     private GameObject specialPlant;
+    public GameObject CureButton;
 
     public static bool enableWilt;
 
@@ -42,6 +44,7 @@ public class MiniGameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        CureButton.SetActive(false);
         enableWilt = false;
         prevTimeSpeed = timeSpeed;
         dialogNum = 0;
@@ -66,17 +69,17 @@ public class MiniGameManager : MonoBehaviour
         else if (dialogNum == 3)
             StartCoroutine(tryWater(30f));
         else if (dialogNum == 4)
-            StartCoroutine(tryWater(36f));
+            StartCoroutine(tryWater(35f));
         
         else if (dialogNum == 5){
             enableWilt = true;
             Debug.Log("Speeding up time. . .");
             timeSpeed = 0.05f;
-            StartCoroutine(wait(200));
+            StartCoroutine(wait(130));
             }
         else if (dialogNum == 6)
         {
-            Debug.Log("dialogNum 6");
+            CureButton.SetActive(true);
         }
         /*
         else glitchyTime();*/
@@ -135,10 +138,17 @@ public class MiniGameManager : MonoBehaviour
         float i = 0;
         while (i < num)
         {
-            i += 0.05f;
+            i += 0.09f;
             yield return null; // Wait for the next frame
         }
         startDialog();
+    }
+
+    public void restartFarm()
+    {
+        Debug.Log("Restart farm called");
+        SceneManager.LoadSceneAsync("Desktop");
+        SceneManager.UnloadSceneAsync("MiniGame");
     }
 
 }
