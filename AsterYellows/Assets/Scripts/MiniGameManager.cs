@@ -28,7 +28,10 @@ public class MiniGameManager : MonoBehaviour
     
     public float timeSpeed;
     private float prevTimeSpeed;
-    
+    private GameObject specialPlant;
+
+    public static bool enableWilt;
+
     public TextAsset jsonFile;
 
     [SerializeField]
@@ -39,6 +42,7 @@ public class MiniGameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        enableWilt = false;
         prevTimeSpeed = timeSpeed;
         dialogNum = 0;
 
@@ -56,22 +60,25 @@ public class MiniGameManager : MonoBehaviour
         if (dialogNum == 1)
         { //wait for first seed
             StartCoroutine(plantCount(1));
-            Debug.Log("Passed the coroutine!");
-
-
         }
-        
         else if (dialogNum == 2)
-            StartCoroutine(startWilt());/*
+            StartCoroutine(startWilt());
         else if (dialogNum == 3)
-            tryWater();
+            StartCoroutine(tryWater(30f));
         else if (dialogNum == 4)
-            waterAgain();
+            StartCoroutine(tryWater(36f));
+        
         else if (dialogNum == 5){
-            PlantPhaseController.enableWilt = true;
-            getHealingItem();}
+            enableWilt = true;
+            Debug.Log("Speeding up time. . .");
+            timeSpeed = 0.05f;
+            StartCoroutine(wait(200));
+            }
         else if (dialogNum == 6)
-            speedUpTime();
+        {
+            Debug.Log("dialogNum 6");
+        }
+        /*
         else glitchyTime();*/
 
         //start next dialog
@@ -91,28 +98,46 @@ public class MiniGameManager : MonoBehaviour
             //Debug.Log("IEnumberator plantmouseclick is: "+ PlantMouseClick.plantCount);
             yield return null; // Wait for the next frame
         }
-
-        // The static variable has changed to the desired value
-        Debug.Log("Static variable has changed to " + desiredValue);
         startDialog();
     }
     private IEnumerator startWilt()
     {
         float timeWatch = 0.0f;
-        while (((PlantMouseClick.plantCount < 10) && (timeWatch < 60f)) ||  ((timeWatch > 100f)))
+        while (((PlantMouseClick.plantCount < 15) && (timeWatch < 80f)) ||  ((timeWatch > 100f)))
         {
             timeWatch += timeSpeed;
             yield return null; // Wait for the next frame
         }
-        /*PlantPhaseController.enableWilt = true;
-        Debug.Log("Set wilt to true! waiting...");
-        while ((timeWatch < 90f))
-        {
-            timeWatch += timeSpeed;
-            yield return null; // Wait for the next frame
-        }*/
-        GameObject.Find("Plant(Clone)").GetComponent<PlantPhaseController>().animator.SetFloat("plant_age", 26);
 
+        specialPlant = GameObject.Find("Plant(Clone)");
+        specialPlant.GetComponent<PlantPhaseController>().tick = 26f;
+
+        timeWatch = 0;
+        while ((timeWatch < 10f))
+        {
+            timeWatch += 0.1f;
+            yield return null; // Wait for the next frame
+        }
+        startDialog();
+
+    }
+    private IEnumerator tryWater(float num)
+    {
+        while (specialPlant.GetComponent<PlantPhaseController>().animator.GetFloat("plant_age") <= num) 
+        {
+            yield return null; // Wait for the next frame
+        }
+        startDialog();
+    }
+
+    private IEnumerator wait(float num)
+    {
+        float i = 0;
+        while (i < num)
+        {
+            i += 0.5f;
+            yield return null; // Wait for the next frame
+        }
         startDialog();
     }
 

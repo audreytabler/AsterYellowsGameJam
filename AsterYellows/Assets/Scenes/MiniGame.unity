@@ -1371,7 +1371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeSpeed: 0.01
   jsonFile: {fileID: 4900000, guid: ec1bde5d2fbf3f646ba1673fc04d1423, type: 3}
-  textbox: {fileID: 0}
+  textbox: {fileID: 80835386}
 --- !u!1 &2034655738
 GameObject:
   m_ObjectHideFlags: 0
