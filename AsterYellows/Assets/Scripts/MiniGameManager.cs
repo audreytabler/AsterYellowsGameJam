@@ -35,6 +35,7 @@ public class MiniGameManager : MonoBehaviour
     public static bool enableWilt;
 
     public TextAsset jsonFile;
+    public GlitchyMode glitchyMode;
 
     [SerializeField]
     private GameObject textbox;
@@ -75,7 +76,7 @@ public class MiniGameManager : MonoBehaviour
             enableWilt = true;
             Debug.Log("Speeding up time. . .");
             timeSpeed = 0.05f;
-            StartCoroutine(wait(130));
+            StartCoroutine(wait(78));
             }
         else if (dialogNum == 6)
         {
@@ -106,7 +107,7 @@ public class MiniGameManager : MonoBehaviour
     private IEnumerator startWilt()
     {
         float timeWatch = 0.0f;
-        while (((PlantMouseClick.plantCount < 15) && (timeWatch < 100f)) ||  ((timeWatch > 140f)))
+        while (((PlantMouseClick.plantCount < 15) && (timeWatch < 150f)) ||  ((timeWatch > 200f)))
         {
             timeWatch += timeSpeed;
             yield return null; // Wait for the next frame
@@ -138,7 +139,7 @@ public class MiniGameManager : MonoBehaviour
         float i = 0;
         while (i < num)
         {
-            i += 0.09f;
+            i += 0.1f;
             yield return null; // Wait for the next frame
         }
         startDialog();
@@ -147,8 +148,7 @@ public class MiniGameManager : MonoBehaviour
     public void restartFarm()
     {
         Debug.Log("Restart farm called");
-        SceneManager.LoadSceneAsync("Desktop");
-        SceneManager.UnloadSceneAsync("MiniGame");
+        glitchyMode.GlitchyTime();
     }
 
 }

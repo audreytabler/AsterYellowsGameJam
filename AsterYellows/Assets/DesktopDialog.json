@@ -1,0 +1,29 @@
+{
+  "dialogList": [
+    {
+      "dialog": [
+        {
+          "image": 1,
+          "text": "So yeah. . . I totally knew your plants would get root rot. I can’t believe you just kept watering them – you monster! Hahahahaha!"
+        },
+        {
+          "image": 2,
+          "text": "So here’s the deal. You have data. I want it. I infected your computer with a virus, and now everything on it belongs to me. Here is the other issue. . . "
+        },
+        {
+          "image": 1,
+          "text": "The infection seems to have developed a mind of its own, and I can’t control it. So we are going on a mission to regain control of your data."
+        },
+        {
+          "image": 1,
+          "text": "I know, I know, why should you trust me? Look, I promise not to post your data to the dark web, but who knows what this entity will do!"
+        },
+        {
+          "image": 1,
+          "text": "Besides, you'd never win against the both of us..."
+        }
+
+      ]
+    }
+  ]
+}
