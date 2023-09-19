@@ -6,7 +6,13 @@ using UnityEngine;
 public class PlantPhaseController : MonoBehaviour
 {
     public Animator animator;
-    private float tick;
+    public AudioSource waterSFX;
+    public float tick;
+   // public static bool enableWilt;
+
+
+
+    //public float timeSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,10 +22,16 @@ public class PlantPhaseController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (tick < 25 || animator.GetBool("enableWilt"))
+        if (tick < 24 || MiniGameManager.enableWilt)
         {
-            tick = tick + 0.01f;
-            animator.SetFloat("plant_age", tick);
+            tick = tick + GameObject.Find("MiniGameManager").GetComponent<MiniGameManager>().timeSpeed;
         }
+        
+        animator.SetFloat("plant_age", tick);
+    }
+    private void OnMouseDown()
+    {
+        waterSFX.Play();
+        tick=tick +5;
     }
 }

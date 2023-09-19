@@ -3,15 +3,15 @@
     {
       "dialog": [
         {
-          "image": "AsterTutorialSpriteHappyFace.png",
+          "image": 1,
           "text": "Hello! Welcome to Aster Yellows meadow! (click text box to continue)"
         },
         {
-          "image": "AsterTutorialSpriteInnocentFace.png",
+          "image": 2,
           "text": "Your goal is to return this empty plane of dirt into the lush meadow it once was!"
         },
         {
-          "image": "AsterTutorialSpriteHappyFace.png",
+          "image": 1,
           "text": "Let's start by planting some seeds! Use WASD or the arrow keys to move, and click on a patch of soil to plant a seed!"
         }
       ]
@@ -20,12 +20,12 @@
     {
       "dialog": [
         {
-          "image": "AsterTutorialSpriteHappyFace.png",
-          "text": "Great job! Plant as many seeds as you'd like-- I gave you a lot!"
+          "image": 2,
+          "text": "Great job! Plant as many seeds as you'd like!"
         },
         {
-          "image": "AsterTutorialSpriteHappyFace.png",
-          "text": "The seeds will grow on their own, but you can also use the wateirng can to make them grow faster!"
+          "image": 1,
+          "text": "The seeds will grow on their own, but you can also click on them to water them!"
         }
       ]
     },
@@ -33,16 +33,7 @@
     {
       "dialog": [
         {
-          "image": "AsterTutorialSpriteInnocentFace.png",
-          "text": "Aww look at that! The flowers are starting to bloom! Keep it up!"
-
-        }
-      ]
-    },
-    {
-      "dialog": [
-        {
-          "image": "AsterTutorialSpriteWorriedFace.png",
+          "image": 4,
           "text": "Oh no! One of your flowers is starting to wilt-- maybe you should try watering it?"
 
         }
@@ -51,55 +42,34 @@
     {
       "dialog": [
         {
-          "image": "AsterTutorialSpriteChillFace.png",
-          "text": "Oops wait sorry that made it worse..."
+          "image": 3,
+          "text": "hmm I think it still looks thirsty, why don't you try watering it again?'"
+        }
+      ]
+    },
+    {
+      "dialog": [
+        {
+          "image": 4,
+          "text": "Hmmm... Looks like this flower has some sort of infection... let's hope it doesn't spread to your other plants"
+        },
 
-        },
-        {
-          "image": "AsterTutorialSpriteHappyFace.png",
-          "text": "Here-- try this healing item instead!"
-
-        }
       ]
-    },
+    },  
     {
       "dialog": [
         {
-          "image": "AsterTutorialSpriteHappyFace.png",
-          "text": "Great job! Looks like the flower is happy again!"
+          "image": 4,
+          "text": "Wow-- that infection spread pretty quickly."
         },
         {
-          "image": "AsterTutorialSpriteChillFace.png",
-          "text": "Now that you've got the hang of this, I'll make things more interesting and speed up time a bit!"
+          "image": 0,
+          "text": "I'm afraid our only hope at this point is to start the meadow over as we don't have the means to cure this..."
         },
         {
-          "image": "AsterTutorialSpriteHappyFace.png",
-          "text": "Have fun!"
+          "image": 1,
+          "text": "Here, I've added a button for you to click whenever you would like to restart this meadow! Second time's the charm!"
         }
-      ]
-    },
-    {
-      "dialog": [
-        {
-          "image": "AsterTutorialSpriteWorriedFace.png",
-          "text": "Oh no.. you've neglected my brethren and now the flower has become infected!"
-        },
-        {
-          "image": "AsterTutorialSpriteChillFace.png",
-          "text": "I don't yet know the cure to this particular disease yet, but please just don't let it happen again..."
-        }
-      ]
-    },
-    {
-      "dialog": [
-        {
-          "image": "AsterTutorialSpriteWorriedFace.png",
-          "text": "Yikes-- you've let more than half of our meadow become infected."
-        },
-        {
-          "image": "AsterTutorialSpriteWorriedFace.png",
-          "text": "Oh no?? What's this?? The disease is spreading on its own?"
-        },
       ]
     }
 
