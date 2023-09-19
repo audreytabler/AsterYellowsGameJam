@@ -305,7 +305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 2034655740}
   animator: {fileID: 1132397223}
-  textFile: {fileID: 4900000, guid: ec1bde5d2fbf3f646ba1673fc04d1423, type: 3}
+  textFile: {fileID: 4900000, guid: 74aaf29968fd1ce4893fed303407de8c, type: 3}
   textSpeed: 0.02
 --- !u!61 &80835392
 BoxCollider2D:
@@ -825,7 +825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 20946815025850844, guid: 51064daf5944048349bdb57b962b25b4, type: 3}
       propertyPath: orthographic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 20946815025850844, guid: 51064daf5944048349bdb57b962b25b4, type: 3}
       propertyPath: m_OcclusionCulling
