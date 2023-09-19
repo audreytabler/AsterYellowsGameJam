@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 public class WindowManager : MonoBehaviour, IPointerDownHandler
 {
     private RectTransform rectTransform;
-    public bool isBlocked;
     public int puzzleProgressNumber;
     [SerializeField] PuzzleManager puzzleManager;
 
@@ -18,22 +17,9 @@ public class WindowManager : MonoBehaviour, IPointerDownHandler
     //Methods for showing and hiding the window
     public void OpenWindow()
     {
-        if (!isBlocked)
-        {
-            this.gameObject.SetActive(true);
-            rectTransform.anchoredPosition = Vector3.zero;
-            rectTransform.SetAsLastSibling();
-        }
-        else if(puzzleManager.puzzleProgress[puzzleProgressNumber])
-        {
-            this.gameObject.SetActive(true);
-            rectTransform.anchoredPosition = Vector3.zero;
-            rectTransform.SetAsLastSibling();
-        }
-        else
-        {
-            puzzleManager.ShowError();
-        }
+        this.gameObject.SetActive(true);
+        rectTransform.anchoredPosition = Vector3.zero;
+        rectTransform.SetAsLastSibling();
     }
     public void CloseWindow()
     {

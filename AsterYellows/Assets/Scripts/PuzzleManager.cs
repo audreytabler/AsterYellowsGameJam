@@ -36,12 +36,16 @@ public class PuzzleManager : MonoBehaviour
     {
         if (!CheckFiles())
         {
+            ShowError();
             return;
         }
         if (!CheckForCorupt())
         {
+            ShowError();
             return;
         }
+
+        Debug.Log("You Win");
     }
     private bool CheckFiles()
     {
@@ -71,5 +75,9 @@ public class PuzzleManager : MonoBehaviour
     public void ChangeScene()
     {
         SceneManager.LoadScene(nextScene);
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

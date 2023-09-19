@@ -509,7 +509,7 @@ RectTransform:
   m_GameObject: {fileID: 113783505962190372}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 113783505864616447}
@@ -519,7 +519,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 400, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &113783504431510947
 MonoBehaviour:
@@ -533,7 +533,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e40e58b08d780344989e97a0fca5206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isBlocked: 0
   puzzleProgressNumber: 0
   puzzleManager: {fileID: 0}
 --- !u!114 &5721890844324170189
@@ -548,6 +547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c738a13c5a1f0845927fd3b506fc009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
   currentFile: 0
   positions:
   - {fileID: 1910141019360013908}
@@ -597,7 +597,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.86}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.12528229}
+  m_AnchoredPosition: {x: 0, y: 0.12527466}
   m_SizeDelta: {x: 0, y: -0.25160217}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &113783505985180742
@@ -729,7 +729,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.86}
-  m_AnchoredPosition: {x: 0, y: 0.12549973}
+  m_AnchoredPosition: {x: 0, y: 0.12550354}
   m_SizeDelta: {x: 0, y: 0.25110006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2233828985345361742

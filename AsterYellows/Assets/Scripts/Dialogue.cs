@@ -23,9 +23,9 @@ public class Dialogue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int index = 0;
-        //textComponent.text = string.Empty;
-        //StartDialogue();
+        //int index = 0;
+        textComponent.text = string.Empty;
+        StartDialogue(lines);
     }
 
     // Update is called once per frame

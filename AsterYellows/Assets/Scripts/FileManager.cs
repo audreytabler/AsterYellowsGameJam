@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class FileManager : MonoBehaviour
 {
+    public GameObject canvas;
     public int currentFile;
     public Transform[] positions;
     public MultiDimensional[] files;
-    public GameObject[] fileTypes; // -1 = free Space, 0 = blank file, 1 = folder to 1 , 2 = solution folder, 3 = corrupted folder
+    public GameObject[] fileTypes; // -1 = free Space, 0 = blank file, 1 = folder to anti virus , 2 = solution folder, 3 = corrupted folder, 4 = back folder
     private GameObject[] activeFiles = new GameObject[6];
 
     public void Awake()
@@ -19,15 +20,12 @@ public class FileManager : MonoBehaviour
     {
         for (int i = 0; i < files[currentFile].array.Length; i++)
         {
-            if (activeFiles[i] != null)
-            {
-                Destroy(activeFiles[i]);
-            }
+            CloseFiles(i);
             
             if (files[currentFile].array[i] != -1)
             {
                 GameObject file = Instantiate(fileTypes[files[currentFile].array[i]], positions[i]);
-                file.transform.SetParent(positions[i]);
+                file.transform.SetParent(transform);
                 file.GetComponent<File>().SetData(currentFile, i, this.gameObject);
                 activeFiles[i] = file;
             }
@@ -65,6 +63,22 @@ public class FileManager : MonoBehaviour
                     files[i].array[j] = -1;
                 }
             }
+        }
+    }
+    public void CloseFiles(int i)
+    {
+        if (activeFiles[i] != null)
+        {
+            Destroy(activeFiles[i]);
+        }
+        
+        
+    }
+    void OnDisable()
+    {
+        for (int i = 0; i < files[currentFile].array.Length; i++)
+        {
+            CloseFiles(i);
         }
     }
 }
