@@ -2843,7 +2843,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1760225570
 Transform:
   m_ObjectHideFlags: 0
@@ -2874,7 +2874,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1664959339}
   animator: {fileID: 362681200}
-  textFile: {fileID: 4900000, guid: 74aaf29968fd1ce4893fed303407de8c, type: 3}
+  textFile: {fileID: 4900000, guid: 40f3a3d0a39f3614497fea327df8d214, type: 3}
   textSpeed: 0.05
 --- !u!224 &1809930447 stripped
 RectTransform:
