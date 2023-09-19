@@ -793,7 +793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4465311014438268, guid: 51064daf5944048349bdb57b962b25b4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: -9.49
       objectReference: {fileID: 0}
     - target: {fileID: 4465311014438268, guid: 51064daf5944048349bdb57b962b25b4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -825,11 +825,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 20946815025850844, guid: 51064daf5944048349bdb57b962b25b4, type: 3}
       propertyPath: orthographic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 20946815025850844, guid: 51064daf5944048349bdb57b962b25b4, type: 3}
       propertyPath: m_OcclusionCulling
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 20946815025850844, guid: 51064daf5944048349bdb57b962b25b4, type: 3}
       propertyPath: m_BackGroundColor.b
@@ -843,6 +843,10 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 20946815025850844, guid: 51064daf5944048349bdb57b962b25b4, type: 3}
+      propertyPath: m_AllowDynamicResolution
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114330209250887110, guid: 51064daf5944048349bdb57b962b25b4, type: 3}
       propertyPath: speed
       value: -1.33
@@ -852,6 +856,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114330209250887110, guid: 51064daf5944048349bdb57b962b25b4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114377936711104872, guid: 51064daf5944048349bdb57b962b25b4, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -873,6 +881,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114809356731006130, guid: 51064daf5944048349bdb57b962b25b4, type: 3}
       propertyPath: shift
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114809356731006130, guid: 51064daf5944048349bdb57b962b25b4, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
