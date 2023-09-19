@@ -6,31 +6,46 @@ using TMPro;
 public class CommandLine : MonoBehaviour
 {
     public TMP_Text[] texts;
+    public FileManager fileManager;
     private int textAmount = 0;
+    private string text;
 
     public void SetText(GameObject textInput)
     {
-        Debug.Log("text");
+        text = textInput.GetComponent<TMP_InputField>().text;
+        text = text.ToLower();
 
         if (textAmount < texts.Length)
         {
-            texts[textAmount].text = textInput.GetComponent<TMP_InputField>().text;
+            texts[textAmount].text = text;
             textAmount++;
         }
         else
         {
-            ShiftText(textInput.GetComponent<TMP_InputField>().text);
+            ShiftText(text);
         }
 
-        CheckText(textInput.GetComponent<TMP_InputField>().text);
+        CheckText(text);
         textInput.GetComponent<TMP_InputField>().text = "";
     }
 
     private void CheckText(string text)
     {
-        switch(text)
+        if (text.Equals("del corruptedfile"))
         {
-            //What the test does
+            fileManager.DeleteCorruptedFiles();
+        }
+        else if (text.Equals("help"))
+        {
+            if (textAmount < texts.Length)
+            {
+                texts[textAmount].text = "del 'fileName'";
+                textAmount++;
+            }
+            else
+            {
+                ShiftText("del 'fileName'");
+            }
         }
     }
 
