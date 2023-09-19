@@ -11,6 +11,8 @@ public class GlitchyMode : MonoBehaviour
     public Camera cam;
     public GameObject textbox;
     public GameObject yellows;
+    public GameObject bgAudioObject;
+    public AudioSource glitchyNoise;
     //private Random RandGenerator;
 
     // Start is called before the first frame update
@@ -20,9 +22,12 @@ public class GlitchyMode : MonoBehaviour
         corruptedVram.enabled = false;
         bleedingColors.enabled = false;
         yellows.SetActive(false);
+
+
     }
     public void GlitchyTime()
     {
+        bgAudioObject.SetActive(false);
         corruptedVram.enabled = true;
         bleedingColors.enabled = true;
         StartCoroutine(startGlitches());
@@ -31,7 +36,7 @@ public class GlitchyMode : MonoBehaviour
 
     IEnumerator startGlitches()
     {
-
+        glitchyNoise.Play();
         for (int i = 0; i < 20; i++)
         {
             corruptedVram.shift -= 0.2f;
