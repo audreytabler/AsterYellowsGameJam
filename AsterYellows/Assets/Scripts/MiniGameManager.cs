@@ -33,6 +33,7 @@ public class MiniGameManager : MonoBehaviour
     public GameObject CureButton;
 
     public static bool enableWilt;
+    public static bool enableWaterWilt;
 
     public TextAsset jsonFile;
     public GlitchyMode glitchyMode;
@@ -47,6 +48,7 @@ public class MiniGameManager : MonoBehaviour
     {
         CureButton.SetActive(false);
         enableWilt = false;
+        enableWaterWilt = false;
         prevTimeSpeed = timeSpeed;
         dialogNum = 0;
 
@@ -107,21 +109,24 @@ public class MiniGameManager : MonoBehaviour
     private IEnumerator startWilt()
     {
         float timeWatch = 0.0f;
-        while (((PlantMouseClick.plantCount < 15) && (timeWatch < 150f)) ||  ((timeWatch > 200f)))
+        while (((PlantMouseClick.plantCount < 15) && (timeWatch < 200f)) ||  ((timeWatch > 250f)))
         {
             timeWatch += timeSpeed;
             yield return null; // Wait for the next frame
         }
 
+        enableWaterWilt = true;
+
         specialPlant = GameObject.Find("Plant(Clone)");
         specialPlant.GetComponent<PlantPhaseController>().tick = 26f;
-
+        
         timeWatch = 0;
         while ((timeWatch < 10f))
         {
             timeWatch += 0.1f;
             yield return null; // Wait for the next frame
         }
+        
         startDialog();
 
     }

@@ -36,6 +36,7 @@ public class GlitchyMode : MonoBehaviour
 
     IEnumerator startGlitches()
     {
+        glitchyNoise.enabled = true;
         glitchyNoise.Play();
         for (int i = 0; i < 20; i++)
         {
