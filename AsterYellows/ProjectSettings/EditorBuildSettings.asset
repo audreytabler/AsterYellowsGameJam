@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Desktop.unity
     guid: 583b2374d83aa804da409c50721d9efc
+  - enabled: 1
+    path: Assets/Scenes/Desktop2.unity
+    guid: e4150c6f01ac48f45bbf553272dca32e
+  - enabled: 1
+    path: Assets/Scenes/Desktop3.unity
+    guid: 31cf6b96bab321c4eb752ccf0396c9b3
+  - enabled: 1
+    path: Assets/Scenes/YouWin.unity
+    guid: 27c69554d4599c441ab23edb3df3d2cf
   m_configObjects: {}

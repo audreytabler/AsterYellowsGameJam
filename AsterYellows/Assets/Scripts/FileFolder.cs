@@ -29,7 +29,7 @@ public class FileFolder : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("File"))
+        if (other.CompareTag("File") && other.GetComponent<File>().newFolder == this.gameObject)
         {
             var file = other.GetComponent<File>();
             file.newFolder = null;

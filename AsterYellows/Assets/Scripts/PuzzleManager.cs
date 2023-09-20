@@ -45,7 +45,7 @@ public class PuzzleManager : MonoBehaviour
             return;
         }
 
-        Debug.Log("You Win");
+        ChangeScene();
     }
     private bool CheckFiles()
     {

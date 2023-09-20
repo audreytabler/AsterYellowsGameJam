@@ -7,6 +7,9 @@ public class CommandLine : MonoBehaviour
 {
     public TMP_Text[] texts;
     public FileManager fileManager;
+    public PuzzleManager puzzleManager;
+    public WindowManager textWindow;
+    public bool ifHasBin = false;
     private int textAmount = 0;
     private string text;
 
@@ -34,18 +37,39 @@ public class CommandLine : MonoBehaviour
         if (text.Equals("del corruptedfile"))
         {
             fileManager.DeleteCorruptedFiles();
+            ShiftText("deleting files...");
         }
         else if (text.Equals("help"))
         {
-            if (textAmount < texts.Length)
+            ShiftText("del 'fileName'");
+            ShiftText("open 'fileName'");
+            ShiftText("RecycleBinFolder");
+        }
+        else if (text.Equals("open text") || text.Equals("open text.txt"))
+        {
+            if (textWindow != null)
             {
-                texts[textAmount].text = "del 'fileName'";
-                textAmount++;
+                ShiftText("opening file...");
+                textWindow.OpenWindow();
+            }
+        }
+        else if (text.Equals("recyclebinfolder"))
+        {
+            if (ifHasBin)
+            {
+                ShiftText("retrieving file...");
+                int i = fileManager.FindOpenPosition(0);
+                fileManager.files[0].array[i] = 2;
+                ifHasBin = false;
             }
             else
             {
-                ShiftText("del 'fileName'");
+                ShiftText("ERROR");
             }
+        }
+        else
+        {
+            ShiftText("ERROR");
         }
     }
 
@@ -55,5 +79,6 @@ public class CommandLine : MonoBehaviour
         texts[1].text = texts[2].text;
         texts[2].text = texts[3].text;
         texts[3].text = newText;
+        textAmount++;
     }
 }

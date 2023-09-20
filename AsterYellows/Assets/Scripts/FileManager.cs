@@ -8,10 +8,10 @@ public class FileManager : MonoBehaviour
     public int currentFile;
     public Transform[] positions;
     public MultiDimensional[] files;
-    public GameObject[] fileTypes; // -1 = free Space, 0 = blank file, 1 = folder to anti virus , 2 = solution folder, 3 = corrupted folder, 4 = back folder
+    public GameObject[] fileTypes; // -1 = free Space, 0 = blank file, 1 = folder to anti virus , 2 = solution folder, 3 = corrupted folder, 4 = back folder, 5 = gamefolder
     private GameObject[] activeFiles = new GameObject[6];
 
-    public void Awake()
+    public void OnEnable()
     {
         DisplayFiles();
     }
@@ -41,7 +41,7 @@ public class FileManager : MonoBehaviour
             files[startingX].array[startingY] = -1;
         }
     }
-    private int FindOpenPosition(int x)
+    public int FindOpenPosition(int x)
     {
         for (int i = 0; i < files[currentFile].array.Length; i++)
         {
