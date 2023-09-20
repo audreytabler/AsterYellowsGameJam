@@ -26,12 +26,18 @@ public class PlantPhaseController : MonoBehaviour
         {
             tick = tick + GameObject.Find("MiniGameManager").GetComponent<MiniGameManager>().timeSpeed;
         }
-        
+        if ((tick > 24) && (!MiniGameManager.enableWaterWilt || !MiniGameManager.enableWaterWilt))
+        {
+            tick = 24;
+        }
         animator.SetFloat("plant_age", tick);
     }
     private void OnMouseDown()
-    {
-        waterSFX.Play();
-        tick=tick +5;
+    {   
+        if ((tick <= 21 || MiniGameManager.enableWilt) || MiniGameManager.enableWaterWilt)
+        {
+            waterSFX.Play();
+            tick = tick + 5;
+        }
     }
 }
